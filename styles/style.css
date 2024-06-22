@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
+  --border-color: #bdc3c7;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+}
+img {
+  width: 100%;
+  border-radius: 2px;
+}
+body {
+  margin: 0;
+}
+
+/*********header and nav***********/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-inline: 1rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+header p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+.header-right a {
+  color: black;
+  font-size: 20px;
+}
+.header-right .menu-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding-inline: 14px;
+  cursor: pointer;
+}
+.nav-lg {
+  display: none;
+}
+.nav-sm {
+  width: 0%;
+  height: 100vh;
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 10rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.nav-sm .cls-btn {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 30px;
+}
+.nav-sm .cls-btn:hover {
+  color: #e74c3c;
+}
+/**************main>intro*********************/
+.intro {
+  height: 100vh;
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  /* background-color: var(--background-color); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.intro img {
+}
+.intro div:nth-child(2) h1 {
+  display: none;
+}
+.intro .shop-btn {
+  display: block;
+  width: fit-content;
+  background-color: #2ecc71;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.intro .shop-btn:hover {
+  background-color: var(--accent-color);
+}
+.intro h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.intro .quality-title-lg {
+  display: none;
+}
+.intro .quality-title-sm {
+  color: var(--text-color);
+  font-weight: 500;
+  margin: none;
+  margin-bottom: -10px;
+}
+.intro p {
+  color: var(--text-color);
+}
+
+/*******css for big screen***********/
+@media (min-width: 820px) {
+  /******header********/
+  header {
+    padding-inline: 2rem;
+  }
+  .nav-sm {
+    display: none;
+  }
+  .nav-lg {
+    display: flex;
+    gap: 20px;
+  }
+  .nav-lg a {
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .nav-lg a:hover {
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  .menu-btn {
+    display: none;
+  }
+  /****main>intro*******/
+  .intro {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .intro div:nth-child(2) h1 {
+    display: block;
+  }
+  .intro div:nth-child(2) {
+    width: 100%;
+  }
+  .intro div:nth-child(1) h1 {
+    display: none;
+  }
+
+  .intro h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+  }
+  .intro .shop-btn {
+    display: block;
+    width: fit-content;
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 5px;
+  }
+  .intro .quality-title-lg {
+    display: block;
+    font-size: 20px;
+    margin: none;
+    margin-bottom: -15px;
+  }
+  .quality-title-sm {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .header-right {
+    margin-right: 50px;
+  }
+  .nav-lg {
+    margin-right: 100px;
+  }
+  .intro h1 {
+    font-size: 50px;
+  }
+  .intro img {
+    max-width: 600px;
+  }
+  .intro div:nth-child(2) {
+    width: 50%;
+  }
+  .intro .quality-title-lg {
+    margin-bottom: -25px;
+  }
+}

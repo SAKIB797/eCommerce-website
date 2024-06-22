@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <p>bMango</p>
+      <nav id="nav-sm" class="nav-sm">
+        <a href="">About</a>
+        <a href="">Products</a>
+        <a href="">Contact</a>
+        <span
+          onclick="document.getElementById('nav-sm').style.width='0%'"
+          class="cls-btn"
+          ><i class="fa-solid fa-xmark"></i
+        ></span>
+      </nav>
+
+      <div class="header-right">
+        <nav class="nav-lg">
+          <a href="">About</a>
+          <a href="">Products</a>
+          <a href="">Contact</a>
+        </nav>
+        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href=""><i class="fa-solid fa-user"></i></a>
+        <button
+          class="menu-btn"
+          onclick="document.getElementById('nav-sm').style.width='60%'"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!-- ---------main---------- -->
+    <main>
+      <section class="intro">
+        <div>
+          <p class="quality-title-sm">Best Quality Mangoes</p>
+          <h1>Join The Organic Movement!</h1>
+          <img src="./img/2151542169.jpg" alt="" />
+        </div>
+        <div>
+          <p class="quality-title-lg">Best Quality Mangoes</p>
+
+          <h1>Join The Organic Movement!</h1>
+          <p>
+            Indulge in the pure, natural taste of our premium organic mangoes.
+            Grown without the use of harmful pesticides and chemicals, our
+            mangoes are not only delicious but also packed with nutrients. By
+            choosing our organic mangoes, you’re supporting sustainable farming
+            practices that protect the environment and promote biodiversity.
+            Experience the rich, authentic flavor of nature’s finest fruit, and
+            take a step towards a healthier, greener future. Savor the
+            difference with every bite and be a part of the organic revolution!
+          </p>
+          <a class="shop-btn" href=""
+            ><i class="fa-solid fa-cart-shopping"></i> Shop Now</a
+          >
+        </div>
+      </section>
+    </main>
+    <!-- ---------footer---------- -->
+    <footer></footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
