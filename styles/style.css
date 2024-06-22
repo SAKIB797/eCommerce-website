@@ -335,6 +335,9 @@ footer a {
   .intro div:nth-child(2){
     width: 50%;
   }
+  .intro img {
+  max-width: 500px;
+}
   /************ad*********/
   .ad > div:nth-child(1) {
     padding-inline: 4rem;
@@ -381,8 +384,7 @@ footer a {
   }
   .intro {
     flex-direction: row;
-    gap: 50px;
-    /* padding-block: 10rem; */
+    justify-content: flex-start;
     align-items: center;
   }
   .intro h1 {
@@ -390,9 +392,13 @@ footer a {
     margin-block: 20px;
   }
   .intro img {
-    max-width: 600px;
+    max-width: 700px;
   }
+.intro div:nth-child(2){
+  width: 50%;
+      padding-right:2rem ;
 
+}
   .intro .quality-title-lg {
     margin: 0;
   }
