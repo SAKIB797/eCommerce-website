@@ -17,8 +17,8 @@
     <header>
       <p>bMango</p>
       <nav id="nav-sm" class="nav-sm">
-        <a href="">About</a>
-        <a href="">Products</a>
+        <a href="#intro">About</a>
+        <a href="#products">Products</a>
         <a href="">Contact</a>
         <span
           onclick="document.getElementById('nav-sm').style.width='0%'"
@@ -29,8 +29,8 @@
 
       <div class="header-right">
         <nav class="nav-lg">
-          <a href="">About</a>
-          <a href="">Products</a>
+          <a href="#intro">About</a>
+          <a href="#products">Products</a>
           <a href="">Contact</a>
         </nav>
         <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
@@ -45,7 +45,7 @@
     </header>
     <!-- ---------main---------- -->
     <main>
-      <section class="intro">
+      <section id="intro" class="intro">
         <div>
           <p class="quality-title-sm">Best Quality Mangoes</p>
           <h1>Join The Organic Movement!</h1>
@@ -70,9 +70,43 @@
           >
         </div>
       </section>
+      <section class="ad">
+        <div>
+          <p>Get 25% Off On Your First Purchase!</p>
+          <a class="shop-btn" href=""
+            ><i class="fa-solid fa-cart-shopping"></i> Shop Now</a
+          >
+        </div>
+        <div>
+          <p>Try It For Free. No Registration Needed.</p>
+        </div>
+      </section>
+      <section id="products" class="products">
+        <h2>Trending Products</h2>
+        <div id="products-grid" class="products-grid"></div>
+      </section>
     </main>
     <!-- ---------footer---------- -->
-    <footer></footer>
+    <footer>
+      <p>
+        <a
+          href="https://www.facebook.com/SAKIB797"
+          aria-label="facebook profile"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        .
+        <a href="https://github.com/SAKIB797" aria-label="github profile"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        .
+        <a
+          href="https://www.linkedin.com/in/ihSakib/"
+          aria-label="linkedin profile"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </p>
+      <p>&copy; 2024 bMango. All rights reserved.</p>
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>

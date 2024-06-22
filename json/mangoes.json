@@ -1,0 +1,54 @@
+{
+  "mangoes": [
+    {
+      "name": "Himsagar",
+      "price_per_kg": 180,
+      "image": "himsagar.png"
+    },
+    {
+      "name": "Fazli",
+      "price_per_kg": 130,
+      "image": "fazli.webp"
+    },
+    {
+      "name": "Amrapali",
+      "price_per_kg": 160,
+      "image": "amrapali.jpeg"
+    },
+    {
+      "name": "Langra",
+      "price_per_kg": 150,
+      "image": "langra.jpg"
+    },
+    {
+      "name": "Haribhanga",
+      "price_per_kg": 140,
+      "image": "haribangga.jpg"
+    },
+    {
+      "name": "Gopalbhog",
+      "price_per_kg": 170,
+      "image": "gopalbhog.jpg"
+    },
+    {
+      "name": "Kesar",
+      "price_per_kg": 200,
+      "image": "kesar-mango.jpg"
+    },
+    {
+      "name": "Lakkhanbhog",
+      "price_per_kg": 150,
+      "image": "lakshmanbhog.webp"
+    },
+    {
+      "name": "Khirsapat",
+      "price_per_kg": 190,
+      "image": "khirsapat.jpg"
+    },
+    {
+      "name": "Ashwina",
+      "price_per_kg": 120,
+      "image": "ashwina.webp"
+    }
+  ]
+}
