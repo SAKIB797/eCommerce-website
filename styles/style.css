@@ -331,13 +331,9 @@ footer a {
     color: var(--text-color);
     font-size: initial;
   }
- 
-  .intro div:nth-child(2){
-    width: 50%;
-  }
   .intro img {
-  max-width: 500px;
-}
+    max-width: 100%;
+  }
   /************ad*********/
   .ad > div:nth-child(1) {
     padding-inline: 4rem;
@@ -391,14 +387,10 @@ footer a {
     font-size: 50px;
     margin-block: 20px;
   }
-  .intro img {
-    max-width: 700px;
-  }
-.intro div:nth-child(2){
-  width: 50%;
-      padding-right:2rem ;
 
-}
+  .intro div:nth-child(2) {
+    padding-right: 2rem;
+  }
   .intro .quality-title-lg {
     margin: 0;
   }
