@@ -127,6 +127,7 @@ header p {
 }
 .intro p {
   color: var(--text-color);
+  font-size: 14px;
 }
 
 /*******css for big screen***********/
