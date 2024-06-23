@@ -23,7 +23,7 @@ body {
   margin: 0;
 }
 
-/*********header and nav***********/
+/*===========header*1*==========*/
 header {
   display: flex;
   flex-direction: row;
@@ -68,6 +68,7 @@ header p {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-block: 8rem;
   position: fixed;
   top: 0;
@@ -85,45 +86,36 @@ header p {
   color: #e74c3c;
 }
 .nav-sm a {
+  width: 100%;
   color: #2c3e50;
-  display: block;
   text-align: center;
   text-decoration: none;
   padding-block: 1rem;
 }
 .nav-sm a:hover {
   background-color: gainsboro;
-  padding-block: 1rem;
 }
 
-/**************main>intro*********************/
+/*===========intro*1*=================*/
+.intro .quality-title-lg {
+  display: none;
+}
 .intro {
   height: 100vh;
   padding-inline: 2rem;
   padding-block: 2rem;
-  /* background-color: var(--background-color); */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  overflow: hidden;
 }
-
 .intro div:nth-child(2) h1 {
   display: none;
-}
-.intro div:nth-child(2) {
-  align-self: self-start;
 }
 .intro div:nth-child(1) {
   align-self: self-end;
 }
-.intro div:nth-child(1) img {
-  display: block;
-  margin: auto;
-  /* max-width: 300px; */
+.intro div:nth-child(2) {
+  align-self: self-start;
 }
 .intro .shop-btn,
 .ad .shop-btn {
@@ -137,16 +129,14 @@ header p {
   border: none;
   border-radius: 5px;
 }
-.intro .shop-btn:hover {
+.intro .shop-btn:hover,
+.ad .shop-btn:hover {
   background-color: darkorange;
 }
 .intro h1 {
   font-family: "Merriweather", serif;
   font-weight: 700;
   font-style: normal;
-}
-.intro .quality-title-lg {
-  display: none;
 }
 .intro .quality-title-sm {
   color: var(--text-color);
@@ -159,7 +149,7 @@ header p {
   font-size: 14px;
 }
 
-/*******ad**************/
+/*=============ad*1*=============*/
 .ad > div:nth-child(1) {
   display: flex;
   flex-direction: column;
@@ -199,15 +189,14 @@ header p {
   font-weight: bold;
   font-family: "Merriweather", serif;
 }
-/************products***************/
 
+/*=========products*1*================*/
 .products h2 {
   text-align: center;
   font-family: "Merriweather", serif;
   font-weight: bold;
   text-decoration: underline;
 }
-
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -217,7 +206,6 @@ header p {
 .products-grid > div {
   border: 1px solid gainsboro;
   border-radius: 5px;
-  background-color: var(--background-color);
 }
 .products-grid > div:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -233,15 +221,9 @@ header p {
 .products-grid > div > div:nth-child(1) {
   text-align: center;
   padding: 1rem;
-  background-color: white;
 }
 .products-grid > div > div:nth-child(2) > h3 {
   margin: 0;
-}
-
-.products-grid img {
-  max-width: 150px;
-  height: 120px;
 }
 .products-grid > div > div:nth-child(2) > a {
   background-color: #2ecc71;
@@ -254,7 +236,8 @@ header p {
 .products-grid > div > div:nth-child(2) > a:hover {
   background-color: darkorange;
 }
-/******footer*********/
+
+/*======footer*1*=========*/
 footer {
   display: flex;
   flex-direction: column;
@@ -273,9 +256,9 @@ footer a {
   font-size: 18px;
 }
 
-/*******css for big screen***********/
+/*========screen wider than 820px========*/
 @media (min-width: 820px) {
-  /******header********/
+  /*==========header*2*============*/
   header {
     padding-inline: 2rem;
   }
@@ -300,9 +283,15 @@ footer a {
   .menu-btn {
     display: none;
   }
-  /****main>intro*******/
+
+  /*==========intro*2*============*/
+  .intro h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+  }
   .intro {
-    /* flex-direction: row; */
     gap: 50px;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -311,20 +300,11 @@ footer a {
   .intro div:nth-child(1) {
     align-self: center;
   }
-
-  .intro div:nth-child(2) h1 {
-    display: block;
-  }
-
   .intro div:nth-child(1) h1 {
     display: none;
   }
-
-  .intro h1 {
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 32px;
+  .intro div:nth-child(2) h1 {
+    display: block;
   }
   .intro .shop-btn {
     display: block;
@@ -348,10 +328,8 @@ footer a {
     color: var(--text-color);
     font-size: initial;
   }
-  /* .intro img {
-    max-width: 100%;
-  } */
-  /************ad*********/
+
+  /*===========ad*2*===============*/
   .ad > div:nth-child(1) {
     padding-inline: 4rem;
     padding-block: 2rem;
@@ -369,7 +347,6 @@ footer a {
     border: none;
     border-radius: 5px;
   }
-
   .ad > div:nth-child(1) p {
     text-align: left;
     font-size: 30px;
@@ -378,33 +355,28 @@ footer a {
   .ad div:nth-child(2) p {
     font-size: 24px;
   }
-  /******products*******/
 
+  /*=============products*2*==============*/
   .products-grid img {
-    /* max-width: 150px; */
     height: 150px;
   }
   .products h2 {
     font-size: 30px;
   }
 }
+/*==========screen wider than 1200px===========*/
 @media (min-width: 1200px) {
+  /*==========header*3*===============*/
   .header-right {
     margin-right: 50px;
   }
   .nav-lg {
     margin-right: 100px;
   }
-  .intro {
-    /* flex-direction: row;
-    justify-content: flex-start; */
-    align-items: center;
-  }
   .intro h1 {
     font-size: 50px;
     margin-block: 20px;
   }
-
   .intro div:nth-child(2) {
     padding-right: 2rem;
   }
@@ -412,10 +384,8 @@ footer a {
     margin: 0;
   }
 
-  /******products*******/
-
+  /*============products*3*================*/
   .products-grid img {
-    /* max-width: 300px; */
     height: 150px;
   }
   .products-grid {
