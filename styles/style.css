@@ -381,7 +381,7 @@ footer a {
   /******products*******/
 
   .products-grid img {
-    max-width: 150px;
+    /* max-width: 150px; */
     height: 150px;
   }
   .products h2 {
@@ -415,11 +415,11 @@ footer a {
   /******products*******/
 
   .products-grid img {
-    max-width: 300px;
+    /* max-width: 300px; */
     height: 200px;
   }
   .products-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
   }
   .products h2 {
