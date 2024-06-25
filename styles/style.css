@@ -225,15 +225,16 @@ header p {
 .products-grid > div > div:nth-child(2) > h3 {
   margin: 0;
 }
-.products-grid > div > div:nth-child(2) > a {
+.products-grid > div > div:nth-child(2) > .buy-btn {
   background-color: #2ecc71;
   text-align: center;
   padding-block: 5px;
   border-radius: 2px;
   text-decoration: none;
   color: white;
+  border: none;
 }
-.products-grid > div > div:nth-child(2) > a:hover {
+.products-grid > div > div:nth-child(2) > .buy-btn:hover {
   background-color: darkorange;
 }
 
