@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const mangoVarietyInput = document.getElementById("mangoVariety");
     const amountInput = document.getElementById("amount");
     const priceDisplay = document.getElementById("priceDisplay");
-    const totalInput = document.getElementById("total");
+    const total = document.getElementById("totalPrice");
 
     function updatePrice() {
       const varietyValue = mangoVarietyInput.value.trim();
@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           priceDisplay.textContent = `Total Price: ${totalPrice.toFixed(
             2
           )} BDT`;
-          totalInput.value = totalPrice.toFixed(2);
         } else {
           priceDisplay.textContent = ""; // Clear price display if no mango is selected
         }
@@ -66,7 +65,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     amountInput.addEventListener("input", updatePrice);
 
     /*==============js for order form`s modal=================*/
-
     // Event listeners for "Buy" buttons to show modal
     document.querySelectorAll(".buy-btn").forEach((btn) => {
       btn.addEventListener("click", () => {

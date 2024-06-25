@@ -61,7 +61,7 @@
             take a step towards a healthier, greener future. Savor the
             difference with every bite and be a part of the organic revolution!
           </p>
-          <a class="shop-btn" href=""
+          <a class="shop-btn" href="#products"
             ><i class="fa-solid fa-cart-shopping"></i> Shop Now</a
           >
         </div>
@@ -69,7 +69,7 @@
       <section class="ad">
         <div>
           <p>Get 25% Off On Your First Purchase!</p>
-          <a class="shop-btn" href=""
+          <a class="shop-btn" href="#products"
             ><i class="fa-solid fa-cart-shopping"></i> Shop Now</a
           >
         </div>
@@ -93,7 +93,7 @@
             <h2>Place an order</h2>
           </div>
           <div class="modal-body">
-            <form name="order" netlify>
+            <form class="order-form" name="order" netlify>
               <div>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required />
@@ -125,9 +125,10 @@
                   required
                 />
               </div>
-              <div id="priceDisplay"></div>
-              <button type="submit">Submit</button>
+              <div class="submit-btn-container"><input type="submit"></div>
+              <input hidden  id="total" name="total price"></input>
             </form>
+            <div id="priceDisplay"></div>
           </div>
         </div>
       </div>

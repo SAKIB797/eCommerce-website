@@ -72,5 +72,50 @@
   color: white;
 }
 .modal-body {
-  padding: 2rem 1rem;
+  padding: 3rem;
+}
+.order-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.order-form div {
+  flex: 1 1 200px;
+}
+.order-form label {
+  margin-bottom: 3px;
+}
+
+.order-form input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.submit-btn-container {
+  flex: 1 0 100% !important;
+}
+.order-form input[type="submit"] {
+  padding: 10px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.order-form input[type="submit"]:hover {
+  background-color: #007bff;
+}
+@media (min-width: 1200px) {
+  .modal-body {
+    padding: 5rem;
+  }
+  .order-form {
+    margin-bottom: 2rem;
+  }
 }

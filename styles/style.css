@@ -206,10 +206,12 @@ header p {
 .products-grid > div {
   border: 1px solid gainsboro;
   border-radius: 5px;
+  overflow: hidden;
 }
+
 .products-grid > div:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: none;
+  /* border: none; */
 }
 .products-grid > div > div:nth-child(2) {
   display: flex;
@@ -221,6 +223,9 @@ header p {
 .products-grid > div > div:nth-child(1) {
   text-align: center;
   padding: 1rem;
+}
+.products-grid > div > div:nth-child(1) > img {
+  height: 120px;
 }
 .products-grid > div > div:nth-child(2) > h3 {
   margin: 0;
@@ -386,8 +391,8 @@ footer a {
   }
 
   /*============products*3*================*/
-  .products-grid img {
-    height: 150px;
+  .products-grid > div > div:nth-child(1) > img {
+    height: 180px;
   }
   .products-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
