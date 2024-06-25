@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     mangoVarietyInput.addEventListener("input", updatePrice);
     amountInput.addEventListener("input", updatePrice);
 
-    /*==============js for order form`s modal=================*/
+    /*===============js for order form`s modal=================*/
 
     // Event listeners for "Buy" buttons to show modal
     document.querySelectorAll(".buy-btn").forEach((btn) => {
