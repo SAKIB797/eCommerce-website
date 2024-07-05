@@ -22,6 +22,34 @@ section {
 body {
   margin: 0;
 }
+/*========for subscribe section============*/
+#mc_embed_signup {
+  background: #fff;
+  font: 14px Helvetica, Arial, sans-serif;
+  width: 90%;
+  margin: auto;
+  margin-top: -2rem !important;
+  margin-bottom: 4rem !important;
+}
+.mc-field-group {
+  width: 100% !important;
+  /* height: 100%; */
+  flex: 1 1 400px !important;
+}
+.indicates-required {
+  margin-right: 0px !important;
+}
+#mc_embed_signup .mc-field-group input {
+  text-indent: 0.5rem !important;
+}
+
+.subscribe-grp {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
 /*===========header*1*==========*/
 header {

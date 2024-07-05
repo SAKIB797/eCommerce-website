@@ -29,16 +29,6 @@
 }
 
 /* Add Animation */
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
 
 @keyframes animatetop {
   from {
@@ -55,7 +45,8 @@
 .close-modal {
   color: white;
   float: right;
-  font-size: 28px;
+  margin: 0.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -79,11 +70,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
-  align-items: flex-end;
   margin-bottom: 1rem;
 }
 
-.order-form div {
+.order-form > div {
   flex: 1 1 200px;
 }
 .order-form label {
@@ -97,7 +87,7 @@
   border: 1px solid #ccc;
 }
 .submit-btn-container {
-  flex: 1 0 100% !important;
+  flex: 0 0 100% !important;
 }
 .order-form input[type="submit"] {
   padding: 10px;
@@ -109,7 +99,7 @@
   margin-top: 10px;
 }
 .order-form input[type="submit"]:hover {
-  background-color: #007bff;
+  background-color: #ffb347;
 }
 @media (min-width: 1200px) {
   .modal-body {
