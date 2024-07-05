@@ -243,6 +243,11 @@ header p {
   background-color: darkorange;
 }
 /*========for subscribe section============*/
+.subscribe-wrapper {
+  background-color: whitesmoke;
+  overflow: hidden;
+  padding-top: 4rem;
+}
 #mc_embed_signup {
   background: #fff;
   font: 14px Helvetica, Arial, sans-serif;
@@ -250,12 +255,20 @@ header p {
   margin: auto;
   margin-top: -2rem !important;
   margin-bottom: 4rem !important;
+  background-color: transparent;
 }
 .mc-field-group {
   width: 100% !important;
   flex: 1 1 400px !important;
+  padding-bottom: 1.5rem !important;
 }
-
+.mc-field-group input {
+  background-color: white !important;
+}
+#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
+  border: 2px solid #e85c41;
+  background-color: white !important;
+}
 .indicates-required {
   margin-right: 0px !important;
 }
@@ -267,6 +280,7 @@ header p {
   margin: 0 !important;
   padding: 0 !important;
   padding-top: 5px !important;
+  background-color: transparent !important;
 }
 .email-grp {
   flex: 1 1 100% !important;
@@ -282,7 +296,7 @@ header p {
 #mce-responses {
   padding: 0 !important;
   margin: 0 !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 10px !important;
 }
 
 #mce-success-response {
