@@ -244,9 +244,11 @@ header p {
 }
 /*========for subscribe section============*/
 .subscribe-wrapper {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+  border-block: 2px dashed gray;
   overflow: hidden;
-  padding-top: 4rem;
+  padding-top: 3.5rem;
+  margin-bottom: 0px;
 }
 #mc_embed_signup {
   background: #fff;
