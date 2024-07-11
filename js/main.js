@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const amount = parseFloat(document.getElementById("amount").value);
       const price = parseFloat(pricePerKg.split(" ")[0]); // Assuming the format is "xx BDT/kg"
 
-      if (!isNaN(amount) && !isNaN(price)) {
+      if (!isNaN(amount) && !isNaN(price) && amount > 0) {
         const totalPrice = amount * price;
         document.getElementById(
           "totalPrice"
