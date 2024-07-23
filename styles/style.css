@@ -73,8 +73,9 @@ header p {
   position: fixed;
   top: 0;
   right: 0;
-  overflow: hidden;
   transition: 0.5s;
+  z-index: 100;
+  overflow: hidden;
 }
 .nav-sm .cls-btn {
   position: absolute;
@@ -225,7 +226,7 @@ header p {
   padding: 1rem;
 }
 .products-grid > div > div:nth-child(1) > img {
-  height: 120px;
+  height: 150px;
 }
 .products-grid > div > div:nth-child(2) > h3 {
   margin: 0;
@@ -257,8 +258,8 @@ header p {
   margin: auto;
   margin-top: -2rem !important;
   margin-bottom: 4rem !important;
-  background-color: transparent;
 }
+
 .mc-field-group {
   width: 100% !important;
   flex: 1 1 400px !important;

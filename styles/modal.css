@@ -51,7 +51,7 @@
 }
 
 .close-modal:hover {
-  color: #000;
+  color: orangered;
   text-decoration: none;
   cursor: pointer;
 }

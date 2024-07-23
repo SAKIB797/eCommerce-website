@@ -76,3 +76,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error fetching and rendering data:", error);
   }
 });
+
+
+document
+  .getElementById("mc-embedded-subscribe")
+  .addEventListener("click", (event) => {
+    event.preventDefault();
+
+    let form = document.getElementById("mc-embedded-subscribe-form");
+    let email = document.getElementById("mce-EMAIL");
+    let fname = document.getElementById("mce-FNAME");
+
+    if (email.checkValidity() && fname.checkValidity()) {
+      localStorage.setItem("email", email.value);
+      form.submit();
+      form.clear();
+    }
+  });
