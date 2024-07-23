@@ -28,16 +28,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Function to open the modal and set the form values
     document.querySelectorAll(".buy-btn").forEach((btn) => {
       btn.addEventListener("click", (event) => {
-        const productCard = event.target.closest(".product-card");
-        const mangoVariety = productCard.querySelector("h3").textContent;
-        const pricePerKg = productCard.querySelector("p").textContent;
-
-        // Set the values in the form
-        document.getElementById("mangoVariety").value = mangoVariety;
-        document.getElementById("price-per-kg").textContent = pricePerKg;
-
         // Show the modal
         modal.style.display = "block";
+        if (localStorage.getItem("email") == null) {
+          document.querySelector(".non-subscriber").style.display = "flex";
+          document.querySelector(".modal-content").style.display = "none";
+        } else {
+          document.querySelector(".non-subscriber").style.display = "none";
+          document.querySelector(".modal-content").style.display = "block";
+          const productCard = event.target.closest(".product-card");
+          const mangoVariety = productCard.querySelector("h3").textContent;
+          const pricePerKg = productCard.querySelector("p").textContent;
+
+          // Set the values in the form
+          document.getElementById("mangoVariety").value = mangoVariety;
+          document.getElementById("price-per-kg").textContent = pricePerKg;
+        }
       });
     });
 
@@ -72,24 +78,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         modal.style.display = "none";
       }
     };
+
+    document
+      .getElementById("mc-embedded-subscribe")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+
+        let form = document.getElementById("mc-embedded-subscribe-form");
+        let email = document.getElementById("mce-EMAIL");
+        let fname = document.getElementById("mce-FNAME");
+
+        if (email.checkValidity() && fname.checkValidity()) {
+          localStorage.setItem("email", email.value);
+          form.submit();
+          form.reset();
+        }
+      });
+
+    document
+      .getElementById("goto-subscribe-btn")
+      .addEventListener("click", () => {
+        modal.style.display = "none";
+      });
   } catch (error) {
     console.error("Error fetching and rendering data:", error);
   }
 });
-
-
-document
-  .getElementById("mc-embedded-subscribe")
-  .addEventListener("click", (event) => {
-    event.preventDefault();
-
-    let form = document.getElementById("mc-embedded-subscribe-form");
-    let email = document.getElementById("mce-EMAIL");
-    let fname = document.getElementById("mce-FNAME");
-
-    if (email.checkValidity() && fname.checkValidity()) {
-      localStorage.setItem("email", email.value);
-      form.submit();
-      form.clear();
-    }
-  });

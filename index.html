@@ -93,12 +93,21 @@
       </section>
       <!-------------- modal for buying form-------------->
       <div id="myModal" class="modal">
-        <!-- Modal content -->
+        <!-- modal header -->
+        <div class="modal-header">
+          <span class="close-modal">&times;</span>
+          <h2>Place an order</h2>
+        </div>
+        <!-- non-subscriber content -->
+        <div class="non-subscriber">
+          <h3 style="margin-bottom: 0">To place an Order</h3>
+          <p style="color: orangered">
+            You have to subscribe to our newsletter first!
+          </p>
+          <p><a id="goto-subscribe-btn" href="#subscribe">Subscribe Now</a></p>
+        </div>
+        <!-- buying content -->
         <div class="modal-content">
-          <div class="modal-header">
-            <span class="close-modal">&times;</span>
-            <h2>Place an order</h2>
-          </div>
           <div class="modal-body">
             <form class="order-form" name="order" netlify>
               <div>
@@ -107,7 +116,7 @@
               </div>
               <div>
                 <label for="phone">Phone:</label>
-                <input type="number" id="phone" name="phone" required />
+                <input type="tel" id="phone" name="phone" required />
               </div>
               <div>
                 <label for="mangoVariety">Variety:</label>
@@ -115,8 +124,6 @@
                   type="text"
                   id="mangoVariety"
                   name="mangoVariety"
-                  placeholder="Type a mango variety"
-                  required
                   readonly
                 />
               </div>
@@ -146,7 +153,7 @@
                 <div id="totalPrice"></div>
               </div>
               <div class="submit-btn-container">
-                <input type="submit" />
+                <input type="submit" value="Confirm Order" />
               </div>
               <input hidden id="total" name="total price" />
             </form>
@@ -154,7 +161,7 @@
         </div>
       </div>
       <!------------- subscribe form -------------->
-      <div class="subscribe-wrapper">
+      <div id="subscribe" class="subscribe-wrapper">
         <div id="mc_embed_shell">
           <div id="mc_embed_signup">
             <form
