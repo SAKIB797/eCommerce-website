@@ -22,10 +22,8 @@
 .modal-content {
   position: relative;
   background-color: #fefefe;
-  margin: auto;
+  margin: 0;
   padding: 0;
-  border: 1px solid #888;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Add Animation */
@@ -127,7 +125,6 @@ input[type="number"] {
   background-color: white;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -135,7 +132,6 @@ input[type="number"] {
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 2rem;
-
 }
 .modal-content {
   display: none;
