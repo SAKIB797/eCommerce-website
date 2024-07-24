@@ -37,7 +37,7 @@ header {
   right: 0;
   left: 0;
   padding-inline: 1rem;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px gainsboro;
   backdrop-filter: blur(10px);
 }
 header p {
@@ -152,6 +152,12 @@ header p {
   color: var(--text-color);
   font-size: 14px;
 }
+.intro img {
+  max-width: 400px;
+  max-height: 400px;
+  display: block;
+  margin: auto;
+}
 
 /*=============ad*1*=============*/
 .ad > div:nth-child(1) {
@@ -246,6 +252,11 @@ header p {
 .products-grid > div > div:nth-child(2) > .buy-btn:hover {
   background-color: darkorange;
 }
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /*========for subscribe section============*/
 .subscribe-wrapper {
   /* background-color: whitesmoke; */
@@ -311,13 +322,13 @@ header p {
 }
 #mc_embed_signup_scroll h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid green;
   width: fit-content;
 }
 #mc_embed_signup_scroll h2 .first-word {
   font-size: 24px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: orange;
+  color: green;
 }
 
 /*========screen wider than 820px========*/
@@ -447,7 +458,10 @@ header p {
   .intro .quality-title-lg {
     margin: 0;
   }
-
+  .intro img {
+    max-width: 100%;
+    max-height: 100%;
+  }
   /*============products*3*================*/
   .products-grid > div > div:nth-child(1) > img {
     height: 180px;

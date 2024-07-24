@@ -50,7 +50,7 @@ document.getElementById("amount").addEventListener("input", () => {
     const totalPrice = amount * price;
     document.getElementById(
       "totalPrice"
-    ).textContent = `Total: ${totalPrice} BDT`;
+    ).textContent = `মোট: ${totalPrice} BDT`;
     document.getElementById("total").value = totalPrice;
   } else {
     document.getElementById("totalPrice").textContent = " ";

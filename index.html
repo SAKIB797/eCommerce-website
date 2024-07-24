@@ -11,20 +11,22 @@
     <header>
       <p>bMango</p>
       <nav id="nav-sm" class="nav-sm">
-        <a href="#intro">About</a>
-        <a href="#products">Products</a>
-        <a href="">Contact</a>
-        <span
-          onclick="document.getElementById('nav-sm').style.width='0%'"
-          class="cls-btn"
+        <a onclick="this.parentNode.style.width='0%'" href="#intro">সম্পর্কে</a>
+        <a onclick="this.parentNode.style.width='0%'" href="#products"
+          >পণ্যসমূহ</a
+        >
+        <a onclick="this.parentNode.style.width='0%'" href="javascript:void()"
+          >যোগাযোগ</a
+        >
+        <span onclick="this.parentNode.style.width='0%'" class="cls-btn"
           ><i class="fa-solid fa-xmark"></i
         ></span>
       </nav>
       <div class="header-right">
         <nav class="nav-lg">
-          <a href="#intro">About</a>
-          <a href="#products">Products</a>
-          <a href="">Contact</a>
+          <a href="#intro">সম্পর্কে</a>
+          <a href="#products">পণ্যসমূহ</a>
+          <a href="">যোগাযোগ</a>
         </nav>
         <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
         <a href=""><i class="fa-solid fa-user"></i></a>
@@ -62,24 +64,24 @@
             difference with every bite and be a part of the organic revolution!
           </p>
           <a class="shop-btn" href="#products"
-            ><i class="fa-solid fa-cart-shopping"></i> Shop Now</a
+            ><i class="fa-solid fa-cart-shopping"></i> ক্রয় করুন</a
           >
         </div>
       </section>
       <section class="ad">
         <div>
-          <p>Get 25% Off On Your First Purchase!</p>
+          <p>আমরা দিচ্ছি প্রথম অর্ডারে ১৫% ছাড়!</p>
           <a class="shop-btn" href="#products"
-            ><i class="fa-solid fa-cart-shopping"></i> Shop Now</a
+            ><i class="fa-solid fa-cart-shopping"></i> কিনুন</a
           >
         </div>
         <div>
-          <p>Try It For Free. No Registration Needed.</p>
+          <p>কোনো প্রকার রেজিস্ট্রেসনের প্রয়োজন নেই</p>
         </div>
       </section>
       <!----------- products section -------->
       <section id="products" class="products">
-        <h2>Trending Products</h2>
+        <h2>জনপ্রিয় আমসমূহ</h2>
         <div class="products-grid" appml-data="./json/mangoes.json">
           <div class="product-card" appml-repeat="mangoes">
             <div>
@@ -88,7 +90,7 @@
             <div class="product-info">
               <h3>{{name}}</h3>
               <p>{{price_per_kg}} BDT/kg</p>
-              <button class="buy-btn">Buy</button>
+              <button class="buy-btn">কিনুন</button>
             </div>
           </div>
         </div>
@@ -99,16 +101,16 @@
           <!-- modal header -->
           <div class="modal-header">
             <span class="close-modal">&times;</span>
-            <h2>Place an order</h2>
+            <h2>অর্ডার করুন</h2>
           </div>
           <!-- non-subscriber content -->
           <div class="non-subscriber">
-            <h3 style="margin-bottom: 0">To place an Order</h3>
-            <p style="color: orangered">
-              You have to subscribe to our newsletter first!
-            </p>
+            <h3 style="margin-bottom: 0">প্রথমবারের মতো অর্ডার করতে চাইলে</h3>
+
+            <p style="color: orangered">আমাদের নিজউলেটারে সাবস্ক্রাইব করুন</p>
+
             <p>
-              <a id="goto-subscribe-btn" href="#subscribe">Subscribe Now</a>
+              <a id="goto-subscribe-btn" href="#subscribe">সাবস্ক্রাইব</a>
             </p>
           </div>
           <!-- buying content -->
@@ -116,15 +118,15 @@
             <div class="modal-body">
               <form class="order-form" name="order" netlify>
                 <div>
-                  <label for="name">Name:</label>
+                  <label for="name">নাম:</label>
                   <input type="text" id="name" name="name" required />
                 </div>
                 <div>
-                  <label for="phone">Phone:</label>
+                  <label for="phone">ফোন:</label>
                   <input type="tel" id="phone" name="phone" required />
                 </div>
                 <div>
-                  <label for="mangoVariety">Variety:</label>
+                  <label for="mangoVariety">প্রকার:</label>
                   <input
                     type="text"
                     id="mangoVariety"
@@ -133,7 +135,7 @@
                   />
                 </div>
                 <div>
-                  <label for="amount">Amount:</label>
+                  <label for="amount">পরিমান:</label>
                   <input
                     type="number"
                     id="amount"
@@ -158,7 +160,7 @@
                   <div id="totalPrice"></div>
                 </div>
                 <div class="submit-btn-container">
-                  <input type="submit" value="Confirm Order" />
+                  <input type="submit" value="কনফার্ম অর্ডার" />
                 </div>
                 <input hidden id="total" name="total price" />
               </form>
@@ -179,17 +181,15 @@
               target="_blank"
             >
               <div id="mc_embed_signup_scroll">
-                <h2>
-                  <span class="first-word"> Subscribe</span> <br />
-                  to our Newsletter
-                </h2>
+                <h2><span class="first-word"> নিজউলেটার</span> <br /></h2>
+                <p style="margin-top: -5px; color: orange">সাবস্ক্রাইব করুন</p>
                 <div class="indicates-required">
                   <span class="asterisk">*</span> indicates required
                 </div>
                 <div class="subscribe-grp">
                   <div class="email-grp mc-field-group">
                     <label for="mce-EMAIL"
-                      >Email Address <span class="asterisk">*</span></label
+                      >ই-মেইল এড্রেস <span class="asterisk">*</span></label
                     >
                     <input
                       type="email"
@@ -203,7 +203,7 @@
 
                   <div class="mc-field-group">
                     <label for="mce-FNAME"
-                      >First Name <span class="asterisk">*</span></label
+                      >নেইম <span class="asterisk">*</span></label
                     ><input
                       type="text"
                       name="FNAME"
@@ -215,7 +215,7 @@
                   </div>
                   <div class="mc-field-group">
                     <label for="mce-LNAME"
-                      >Last Name <span class="asterisk"></span></label
+                      >নিকনেইম <span class="asterisk"></span></label
                     ><input
                       type="text"
                       name="LNAME"
@@ -255,7 +255,7 @@
                       name="subscribe"
                       id="mc-embedded-subscribe"
                       class="button"
-                      value="Subscribe"
+                      value="সাবস্ক্রাইব"
                     />
                     <p style="margin: 0px auto">
                       <a
