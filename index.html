@@ -5,16 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>bMango</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/modal.css" />
-    <link
-      href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+    <script src="./js/appml.js"></script>
   </head>
   <body>
     <header>
@@ -89,76 +80,89 @@
       <!----------- products section -------->
       <section id="products" class="products">
         <h2>Trending Products</h2>
-        <div id="products-grid" class="products-grid"></div>
+        <div class="products-grid" appml-data="./json/mangoes.json">
+          <div class="product-card" appml-repeat="mangoes">
+            <div>
+              <img src="./img/{{image}}" alt="{{name}}" />
+            </div>
+            <div class="product-info">
+              <h3>{{name}}</h3>
+              <p>{{price_per_kg}} BDT/kg</p>
+              <button class="buy-btn">Buy</button>
+            </div>
+          </div>
+        </div>
       </section>
       <!-------------- modal for buying form-------------->
       <div id="myModal" class="modal">
-        <!-- modal header -->
-        <div class="modal-header">
-          <span class="close-modal">&times;</span>
-          <h2>Place an order</h2>
-        </div>
-        <!-- non-subscriber content -->
-        <div class="non-subscriber">
-          <h3 style="margin-bottom: 0">To place an Order</h3>
-          <p style="color: orangered">
-            You have to subscribe to our newsletter first!
-          </p>
-          <p>
-            <a id="goto-subscribe-btn" href="#subscribe">Subscribe Now</a>
-          </p>
-        </div>
-        <!-- buying content -->
-        <div class="modal-content">
-          <div class="modal-body">
-            <form class="order-form" name="order" netlify>
-              <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div>
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required />
-              </div>
-              <div>
-                <label for="mangoVariety">Variety:</label>
-                <input
-                  type="text"
-                  id="mangoVariety"
-                  name="mangoVariety"
-                  readonly
-                />
-              </div>
-              <div>
-                <label for="amount">Amount:</label>
-                <input
-                  type="number"
-                  id="amount"
-                  name="amount"
-                  placeholder="kg"
-                  required
-                  min="1"
-                  max=""
-                />
-              </div>
-              <div
-                style="
-                  flex: 0 0 100%;
-                  margin-top: 0.5rem;
-                  margin-bottom: -0.5rem;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-                "
-              >
-                <div id="price-per-kg"></div>
-                <div id="totalPrice"></div>
-              </div>
-              <div class="submit-btn-container">
-                <input type="submit" value="Confirm Order" />
-              </div>
-              <input hidden id="total" name="total price" />
-            </form>
+        <div class="modal-wrapper">
+          <!-- modal header -->
+          <div class="modal-header">
+            <span class="close-modal">&times;</span>
+            <h2>Place an order</h2>
+          </div>
+          <!-- non-subscriber content -->
+          <div class="non-subscriber">
+            <h3 style="margin-bottom: 0">To place an Order</h3>
+            <p style="color: orangered">
+              You have to subscribe to our newsletter first!
+            </p>
+            <p>
+              <a id="goto-subscribe-btn" href="#subscribe">Subscribe Now</a>
+            </p>
+          </div>
+          <!-- buying content -->
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="order-form" name="order" netlify>
+                <div>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div>
+                  <label for="phone">Phone:</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div>
+                  <label for="mangoVariety">Variety:</label>
+                  <input
+                    type="text"
+                    id="mangoVariety"
+                    name="mangoVariety"
+                    readonly
+                  />
+                </div>
+                <div>
+                  <label for="amount">Amount:</label>
+                  <input
+                    type="number"
+                    id="amount"
+                    name="amount"
+                    placeholder="kg"
+                    required
+                    min="1"
+                    max=""
+                  />
+                </div>
+                <div
+                  style="
+                    flex: 0 0 100%;
+                    margin-top: 0.5rem;
+                    margin-bottom: -0.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                  "
+                >
+                  <div id="price-per-kg"></div>
+                  <div id="totalPrice"></div>
+                </div>
+                <div class="submit-btn-container">
+                  <input type="submit" value="Confirm Order" />
+                </div>
+                <input hidden id="total" name="total price" />
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -290,24 +294,8 @@
       </div>
     </main>
     <!-----------footer------------>
-    <footer>
-      <p>
-        <a
-          href="https://www.facebook.com/SAKIB797"
-          aria-label="facebook profile"
-          ><i class="fa-brands fa-facebook"></i></a
-        >.
-        <a href="https://github.com/SAKIB797" aria-label="github profile"
-          ><i class="fa-brands fa-github"></i></a
-        >.
-        <a
-          href="https://www.linkedin.com/in/ihSakib/"
-          aria-label="linkedin profile"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-      </p>
-      <p>&copy; 2024 bMango. All rights reserved.</p>
-    </footer>
+    <footer appml-include-html="./components/footer.htm"></footer>
+
     <script src="./js/main.js"></script>
     <script
       type="text/javascript"
