@@ -61,16 +61,6 @@ document.getElementById("amount").addEventListener("input", () => {
 // store subscriber email in local storage
 document
   .getElementById("mc-embedded-subscribe")
-  .addEventListener("click", (event) => {
-    event.preventDefault();
-
-    let form = document.getElementById("mc-embedded-subscribe-form");
-    let email = document.getElementById("mce-EMAIL");
-    let fname = document.getElementById("mce-FNAME");
-
-    if (email.checkValidity() && fname.checkValidity()) {
-      localStorage.setItem("email", email.value);
-      form.submit();
-      form.reset();
-    }
+  .addEventListener("click", () => {
+    localStorage.setItem("email", email.value);
   });
